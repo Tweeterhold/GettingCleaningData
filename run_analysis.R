@@ -30,7 +30,6 @@ myData <- myData[,c(1, 3, grep("mean|std", colnames(myData)))]
 
 ## Create the tidy data set with the average for each measurement, for each 
 ## subject and activity.
-library(plyr)
 library(reshape)
 
 myDataLong <- melt(myData, id=c("Subject","Activity"))
